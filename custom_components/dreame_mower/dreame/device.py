@@ -1406,6 +1406,7 @@ class DreameMowerDevice:
 
     def connect_cloud(self) -> None:
         """Connect to the cloud api."""
+        _LOGGER.info("Connecting to the Cloud api...")
         if self._protocol.cloud and not self._protocol.cloud.logged_in:
             self._protocol.cloud.login()
             if self._protocol.cloud.logged_in is False:
@@ -2369,7 +2370,6 @@ class DreameMowerDevice:
             raise InvalidActionException("Cleaning mode unavailable")
 
         return self._update_cleaning_mode(cleaning_mode)
-
 
     def set_dnd_task(self, enabled: bool, dnd_start: str, dnd_end: str) -> bool:
         """Set do not disturb task"""

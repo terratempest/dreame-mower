@@ -1297,6 +1297,7 @@ class DreameMowerProtocol:
     @property
     def connected(self) -> bool:
         if (self.prefer_cloud or not self.device) and self.device_cloud:
+            _LOGGER.debug("Checking Connections: Logged in %s, Cloud Connect %s, Self Connect %s", self.device_cloud.logged_in, self.device_cloud.connected, self._connected)
             return self.device_cloud.logged_in and self.device_cloud.connected and self._connected
 
         if self.device:
