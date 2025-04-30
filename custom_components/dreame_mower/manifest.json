@@ -1,6 +1,6 @@
 {
   "domain": "dreame_mower",
-  "name": "Dreame Mower Debug",
+  "name": "Dreame Mower",
   "codeowners": [
     "@bhuebschen"
   ],
@@ -18,5 +18,5 @@
     "py-mini-racer",
     "paho-mqtt"
   ],
-  "version": "v0.0.3-alpha_debuggin"
+  "version": "v0.0.3-alpha"
 }
